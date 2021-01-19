@@ -16,7 +16,6 @@ for i in range(len(word)):
             
 #딕셔너리를 활용하여 내림차순으로 정렬 후 큰 수부터 9~0 숫자 대입
 dic_sorted = sorted(dic.items(),reverse=True,key=lambda item:item[1])
-print(dic_sorted)
 
 mult = 9
 result= 0
