@@ -6,7 +6,8 @@ def divide_mul(a,b):
         return a
     #b가 홀수일 때
     elif b%2 ==1:
-        return divide_mul(a,b-1)*a%C
+        d=divide_mul(a,b-1)
+        return d*a%C
     #b가 짝수
     else:
         d=divide_mul(a,b//2)
