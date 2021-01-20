@@ -6,6 +6,7 @@ def divide(x,y,n):
     check = p[y][x]
     check2= True
     # i == y축 , j == x축
+    # n= 길이이므로 y부터 시작, y+n-1까지/ x부터 시작, x+n-1까지
     for i in range(y,y+n):
         for j in range(x,x+n):
             if p[i][j] != check:
