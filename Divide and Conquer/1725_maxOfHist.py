@@ -1,4 +1,5 @@
     
+    
 n = int(input())
 arr=[]
 result=0
