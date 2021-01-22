@@ -1,4 +1,3 @@
-
 p = 1000000007
 #입력 값이 커서 런타임 에러 -> 페르마 소정리 이용
 '''
@@ -21,7 +20,7 @@ def binary(a,b):
 def divide_mul(a,b):
     if b==1:
         return a
-    #b가 홀수일 때
+    #b가 홀수
     elif b%2 ==1:
         d=divide_mul(a,b-1)
         return d*a%p
@@ -32,7 +31,6 @@ def divide_mul(a,b):
         return d**2%p
 
 #n!
-
 def fac(n):
     result=1
     for i in range(1,n+1):
@@ -49,7 +47,6 @@ b=divide_mul(b,(p-2))%p
 
 #분자
 a = fac(n)
-
 
 print((a*b)%p)
 
