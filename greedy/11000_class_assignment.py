@@ -16,5 +16,5 @@ for i in range(n):
         heapq.heappop(lec_end)
     heapq.heappush(lec_end,lec[i][1])
 
-#종료시간의 갯수가 필요한 강의실의 갯
+#종료시간의 수 == 필요한 강의실의 수
 print(len(lec_end))
