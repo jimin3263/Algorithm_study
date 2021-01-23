@@ -1,14 +1,12 @@
+#중복가능 수열
+#순서없음
 N,M = map(int,input().split())
-check = [False]*N
-ans = [0]*(M+1)
+ans = [0]*M
 
 def nm_sequence(a,n,m):
     if(a == m ):
         for i in range(m):
-            for j in range(i+1,m):
-                if(ans[i]<=ans[j]):
-                    print(ans[i],end=' ')
-                    break
+            print(ans[i],end=' ')
         print()
         return
     
