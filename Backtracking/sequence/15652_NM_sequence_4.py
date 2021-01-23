@@ -1,5 +1,6 @@
+#중복가능 수열
+#오름차순
 N,M = map(int,input().split())
-check = [False]*N
 ans = [0]*M
 
 def nm_sequence(a,b,n,m):
