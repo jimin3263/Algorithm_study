@@ -26,13 +26,13 @@ for i in range(n):
         ans[a]=i+1
         nm_sequence(a+1,n,m)
         check[i]=False #자식노드를 다 탐색한 후, 이 과정을 통해 check가 모두 False로 됨
-``` python
+```
 
 2. 순서존재
 + 함수인자 추가
 
 
-``` 
+```python
 #함수인자 b 추가
 def nm_sequence(a,b,n,m):
     …
