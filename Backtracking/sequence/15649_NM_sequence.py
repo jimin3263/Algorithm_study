@@ -1,3 +1,5 @@
+#중복없는 수열
+#순서없음
 N,M = map(int,input().split())
 check = [False]*(N)
 ans = [0]*M
