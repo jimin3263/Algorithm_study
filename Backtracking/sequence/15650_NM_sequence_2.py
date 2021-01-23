@@ -1,4 +1,5 @@
-#중복없이 M개를 고른 수열
+#중복없는 수열
+#순서존재 -> 오름차순
 N,M = map(int,input().split())
 check = [False]*N
 ans = [0]*M
