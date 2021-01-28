@@ -2,7 +2,7 @@ L,C = map(int,input().split())
 eng_list = list(input().split())
 eng_list=sorted(eng_list)
 
-result = []
+result = [0]*L
 
 #알파벳 체크
 check=[False]*C
@@ -25,11 +25,10 @@ def back(count,check,result,d):
     for i in range(d,C):
         if check[i]:
             continue
-        result.append(eng_list[i])
+        result[count]=eng_list[i]
         check[i] = True
         back(count+1,check,result,i+1)
         check[i] = False
-        result.pop()
 
 
 back(0,check,result,0)
