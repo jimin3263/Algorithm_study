@@ -7,22 +7,23 @@ check=[False]*N
 result=[]
 count =0
 
-def sequence(N,S,arr,check,d):
+def sequence(check,d):
     global count
     global result
     #길이가 0 이거나 합이 S와 같으면
     if len(result) and sum(result)== S:
         count+=1
+        print(result)
         
     for i in range(d,N):
         if check[i]:
             continue
         check[i] = True
         result.append(arr[i])
-        sequence(N,S,arr,check,i+1)
+        sequence(check,i+1)
         result.pop()
         check[i]=False
 
 
-sequence(N,S,arr,check,0)
+sequence(check,0)
 print(count)
