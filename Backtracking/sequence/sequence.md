@@ -1,4 +1,6 @@
-N:1부터 N까지 자연수에서
+## N과M 문제에서의 조건
+
+N:1부터 N까지 자연수에서  
 M:길이가 M인 수열
 
 1. 중복없음, 순서없음
@@ -46,3 +48,37 @@ def nm_sequence(a,b,n,m):
         check[i]=False
 
 ``` 
+---
+## 파이썬에서의 순열, 조합
+
+- 파이썬에서는 순열, 조합에 대해서 함수를 제공하고 있음.
+
+1. 순열
+```python
+#15649
+import itertools
+
+N,M = map(int,input().split())
+num = [i+1 for i in range(N)]
+
+per =list(itertools.permutations(num,M))
+for i in per:
+    for j in i:
+        print(j, end=' ')
+    print()
+```
+
+2. 조합
+```python
+#15650
+import itertools
+
+N,M = map(int,input().split())
+num = [i+1 for i in range(N)]
+
+per =list(itertools.combinations(num,M))
+for i in per:
+    for j in i:
+        print(j, end=' ')
+    print()
+```
