@@ -11,3 +11,4 @@
 |1.7~1.14|[Greedy](https://github.com/jimin3263/Algorithm_study/tree/main/greedy)|
 |1.14~1.21|[Divide and Conquer](https://github.com/jimin3263/Algorithm_study/tree/main/Divide%20and%20Conquer)|
 |1.21~1.28|[Back Tracking](https://github.com/jimin3263/Algorithm_study/tree/main/Backtracking)|
+|1.28~2.4|[Graph](https://github.com/jimin3263/Algorithm_study/tree/main/Graph)|
