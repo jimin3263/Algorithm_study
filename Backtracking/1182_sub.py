@@ -13,7 +13,6 @@ def sequence(check,d):
     #길이가 0 이거나 합이 S와 같으면
     if len(result) and sum(result)== S:
         count+=1
-        print(result)
         
     for i in range(d,N):
         if check[i]:
