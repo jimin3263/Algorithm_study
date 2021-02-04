@@ -17,7 +17,7 @@ def virus(v):
     queue = []
     queue.append(v)
     while queue:
-        v=queue.pop()
+        v=queue.pop(0)
         for i in range(1,M+1):
             if not visited[i] and arr[v][i]==1:
                 count+=1
