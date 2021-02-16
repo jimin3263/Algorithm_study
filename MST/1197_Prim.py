@@ -20,7 +20,6 @@ def MST_prim():
             for val,ed in G[node]:
                 if not visited[ed]:
                     heappush(q,(val,ed))
-                    print(q)
 
     return result
 print(MST_prim())
