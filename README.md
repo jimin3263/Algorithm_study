@@ -13,3 +13,4 @@
 |1.21~1.28|[Back Tracking](https://github.com/jimin3263/Algorithm_study/tree/main/Backtracking)|
 |1.28~2.4|[Graph](https://github.com/jimin3263/Algorithm_study/tree/main/Graph)|
 |2.4~2.11|[MST](https://github.com/jimin3263/Algorithm_study/tree/main/MST)|
+|2.18~2.25|[String](https://github.com/jimin3263/Algorithm_study/tree/main/String)|
