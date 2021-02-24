@@ -23,8 +23,15 @@ sys.setrecursionlimit(10 ** 6)
 ```
 
 ## Timeout
+- python
 ```python
 import sys
 input = sys.stdin.readline
 # 맨 끝 개행문자 포함하므로 input().rstrip()사용
+```
+- c++
+```c++
+ios_base :: sync_with_stdio(false); 
+cin.tie(NULL);
+cout.tie(NULL);
 ```
