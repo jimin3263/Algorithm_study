@@ -1,9 +1,9 @@
 # Algorithm_study
 
 ## References
-> 파이썬 알고리즘 인터뷰  
-> BOJ  
-> SW Expert Academy
+- 파이썬 알고리즘 인터뷰  
+- BOJ  
+- SW Expert Academy
 
 ## Week Study
 |날짜|문제유형|
