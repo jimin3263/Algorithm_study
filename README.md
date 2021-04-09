@@ -1,20 +1,20 @@
-# Algorithm_study
+# Algorithm
 
 ## References
 - 파이썬 알고리즘 인터뷰  
 - BOJ  
 - SW Expert Academy
 
-## Week Study
-|날짜|문제유형|
-|------|---|
-|1.7~1.14|[Greedy](https://github.com/jimin3263/Algorithm_study/tree/main/greedy)|
-|1.15~1.21|[Divide and Conquer](https://github.com/jimin3263/Algorithm_study/tree/main/Divide%20and%20Conquer)|
-|1.22~1.28|[Back Tracking](https://github.com/jimin3263/Algorithm_study/tree/main/Backtracking)|
-|1.29~2.4|[Graph](https://github.com/jimin3263/Algorithm_study/tree/main/Graph)|
-|2.5~2.11|[MST](https://github.com/jimin3263/Algorithm_study/tree/main/MST)|
-|2.19~2.25|[String](https://github.com/jimin3263/Algorithm_study/tree/main/String)|
-|2.26~3.18|[DP](https://github.com/jimin3263/Algorithm_study/tree/main/DP)|
+## Contents
+|문제유형|
+|---|
+|[Greedy](https://github.com/jimin3263/Algorithm_study/tree/main/greedy)|
+|[Divide and Conquer](https://github.com/jimin3263/Algorithm_study/tree/main/Divide%20and%20Conquer)|
+|[Back Tracking](https://github.com/jimin3263/Algorithm_study/tree/main/Backtracking)|
+|[Graph](https://github.com/jimin3263/Algorithm_study/tree/main/Graph)|
+|[MST](https://github.com/jimin3263/Algorithm_study/tree/main/MST)|
+|[String](https://github.com/jimin3263/Algorithm_study/tree/main/String)|
+|[DP](https://github.com/jimin3263/Algorithm_study/tree/main/DP)|
 
 
 ## Timeout
