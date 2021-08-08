@@ -1,5 +1,6 @@
 # Dynamic Programming
 - 문제를 각각의 작은 문제로 나눠 해결한 결과를 저장해뒀다가 나중에 큰 문제의 결과와 합하여 풀이하는 알고리즘
+- **큰 문제를 작은 문제로** 나눌 수 있거나 **작은 문제에서 구한 정답은 그것을 포함하는 큰 문제에서도 동일**할 때 사용
 
 |알고리즘|풀이 가능한 문제들의 특징|풀이 가능한 문제 및 알고리즘|
 |------|---| --- |
@@ -61,7 +62,101 @@ def fib(n):
     return dp[n]
 ```
 
-## #11066
+### 1로 만들기
+> 1. 5로 나누어떨어지면 5로 나눔
+> 2. 3으로 나누어떨어지면 3으로 나눔
+> 3. 2로 나누어떨어지면 2로 나눔  
+> 4. x에서 1을 뺌
 
-![1](https://user-images.githubusercontent.com/50178026/111514330-faf1eb00-8794-11eb-9583-f597abf407df.png)
-![KakaoTalk_20210318_025648270](https://user-images.githubusercontent.com/50178026/111514990-9f742d00-8795-11eb-93b5-a8da476b4a75.jpg)
+```python
+import sys
+input = sys.stdin.readline
+
+x = int(input())
+arr = [5,3,2]
+dp = [0] * (x+1)#bottom-up
+
+for i in range(2,x+1):
+    dp[i]=dp[i-1]+1
+
+    for j in arr:
+        if(i%j == 0):
+            dp[i] = min(dp[i//j]+1, dp[i])
+
+print(dp[x])
+```
+
+### 개미 전사
+> 인접한 창고는 털 수 없음  
+> 최대한 많은 식량을 얻는 방법  
+
+```python
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+arr = list(map(int,input().split()))
+
+dp = [0]* n
+
+dp[0] = arr[0]
+dp[1] = max(arr[1],arr[0])
+
+#i번째를 털건지 체크할 때 i-1 까지의 최적해, i-2까지의 최적해 + i번째 식량을 고려하면 됨
+for i in range(2,n):
+    dp[i] = max(arr[i]+dp[i-2], dp[i-1])
+
+print(dp[n-1])
+```
+
+### 바닥 공사
+> 가로 N x 세로 2   
+> 1x2, 2x1, 2x2 덮개로 채우는 모든 경우의 수  
+
+```python
+#i-1까지 채워져 있으면 2X1
+#i-2까지 채워져 있으면 1X2 두개 or 2X2
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+dp = [0]* (n+1)
+
+dp[1]=1
+dp[2]=3
+for i in range(3,n+1):
+    dp[i] = dp[i-1] + dp[i-2]*2
+
+print(dp[n])
+```
+
+### 효율적인 화폐 구성
+> N가지 종류의 화폐 존재, 이 화폐들의 개수를 최소한으로 이용해서 그 가치의 합을 M원이 되도록 함  
+
+```python
+import sys
+input = sys.stdin.readline
+
+n,m = map(int,input().split())
+list = []
+for i in range(n):
+    list.append(int(input()))
+
+dp = [10001] * (m+1)
+dp[0] = 0
+
+for i in list:
+    for j in range(i, m+1):
+        if (dp[j - i] != 10001): #화폐로 만들 수 있다면
+            dp[j] = min(dp[j-i]+1 ,dp[j])
+
+if dp[m] == 10001:
+    print(-1)
+else:
+    print(dp[m])
+```
+
+### 11066
+<img src= "https://user-images.githubusercontent.com/50178026/111514330-faf1eb00-8794-11eb-9583-f597abf407df.png" width="50%" height="50%"/>
+<img src= "https://user-images.githubusercontent.com/50178026/111514990-9f742d00-8795-11eb-93b5-a8da476b4a75.jpg" width="50%" height="50%"/>
+
