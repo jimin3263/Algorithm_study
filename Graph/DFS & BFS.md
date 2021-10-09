@@ -124,3 +124,41 @@ for i in range(n):
 
 print(result)
 ```
+
+> 미로 탈출
+ 
+```python
+#미로 탈출
+#괴물인 부분 0 -> 탈출할 수 있는 최소 칸의 수 -> BFS 사용
+from collections import deque
+import sys
+input = sys.stdin.readline
+
+n,m = map(int,input().split())
+arr = [list(map(int,input().strip())) for _ in range(n)]
+
+dy = [-1,1,0,0]
+dx = [0,0,-1,1]
+
+def bfs(y,x):
+    queue = deque()
+    queue.append((y,x))
+
+    while queue:
+        y,x = queue.popleft()
+        for i in range(4):
+            ny = y + dy[i]
+            nx = x + dx[i]
+
+            if (nx < 0 or nx >=m or ny <0 or ny >=n):
+                continue # 구간 넘어감 무시
+            if (arr[ny][nx] == 0): #괴물
+                continue
+            if arr[ny][nx] == 1:
+                arr[ny][nx] = arr[y][x] + 1 #가려는 곳에 최단 거리 저장
+                queue.append((ny,nx))
+
+    return arr[n-1][m-1]
+
+print(bfs(0,0))
+```
