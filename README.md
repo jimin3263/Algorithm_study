@@ -1,6 +1,25 @@
 # Algorithm
 
 ## References
+<details>
+<summary> 이것이 코딩테스트다</summary>
+<div markdown="1"> 
+  <h4> 👊 3회독 </h4>
+   <ul>
+      <li>그리디 ☑️ </li>
+      <li>구현 ☑️ ☑️   </li> 
+      <li>DFS/BFS ☑️   </li> 
+      <li>정렬  </li> 
+      <li>이진 탐색 ☑️  </li> 
+      <li>DP ☑️ ☑️   </li> 
+      <li>최단 경로  </li> 
+      <li>그래프 이론   </li> 
+   </ul>
+
+
+</div>
+</details>
+
 - 파이썬 알고리즘 인터뷰  
 - BOJ  
 - SW Expert Academy
