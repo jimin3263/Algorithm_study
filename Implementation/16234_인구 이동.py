@@ -29,8 +29,10 @@ def bfs(y,x):
                     visited[ny][nx] = True
                     queue.append((ny,nx))
                     temp.append((ny, nx))
+
     if flag:
         get_average(temp)
+
     return flag
 
 
@@ -38,7 +40,9 @@ def get_average(temp):
     total_sum = 0
     for y, x in temp:
         total_sum += arr[y][x]
+
     avg = total_sum // len(temp)
+
     for y, x in temp:
         arr[y][x] = avg
 
@@ -49,7 +53,6 @@ while (1):
     for i in range(n):
         for j in range(n):
             if not visited[i][j]:
-                total_count, total_sum = 1, arr[i][j]
                 if bfs(i, j):
                     result = True
 
@@ -58,6 +61,7 @@ while (1):
     day += 1
 
 print(day)
+
 
 
 
